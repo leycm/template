@@ -26,7 +26,7 @@ dependencyResolutionManagement {
     }
 
     /**
-     * Loads a remote libs.versions.toml from RubrionMC’s repository.
+     * Loads a remote libs.versions.toml from LeyCM’s repository.
      * This keeps version catalogs consistent across projects.
      */
     versionCatalogs {
