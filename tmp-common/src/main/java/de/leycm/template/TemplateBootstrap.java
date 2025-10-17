@@ -13,6 +13,6 @@ package de.leycm.template;
 /**
  * TemplateApiBootstrap
  */
-public class TemplateApiBootstrap {
+public class TemplateBootstrap {
 
 }
