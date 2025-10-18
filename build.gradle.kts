@@ -130,7 +130,7 @@ subprojects {
         doLast {
             println("Running push script in repository directory...")
             val repoDir = rootProject.projectDir.parentFile.resolve("repository")
-            val script = repoDir.resolve("push.sh")
+            val script = repoDir.resolve("publish.sh")
 
             @Suppress("DEPRECATION")
             exec {
