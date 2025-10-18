@@ -125,6 +125,25 @@ subprojects {
             }
         }
     }
+
+    tasks.register("pushRepo") {
+        doLast {
+            println("Running push script in repository directory...")
+            val repoDir = rootProject.projectDir.parentFile.resolve("repository")
+            val script = repoDir.resolve("push.sh")
+
+            @Suppress("DEPRECATION")
+            exec {
+                workingDir = repoDir
+                commandLine("sh", script.absolutePath)
+            }
+        }
+    }
+
+    tasks.named("publish") {
+        finalizedBy("pushRepo")
+    }
+
 }
 
 //  ─────────────────────────────────────────────
@@ -140,6 +159,7 @@ tasks.register("packets") {
         val outDir = rootProject.file("out").apply { mkdirs() }
 
         subprojects.filter { it.name != "api" }.forEach { project ->
+            @Suppress("DEPRECATION")
             val jar = project.buildDir.resolve("libs/${rootProject.name}-${project.name}-${project.version}.jar")
             if (jar.exists()) {
                 jar.copyTo(outDir.resolve(jar.name), overwrite = true)
