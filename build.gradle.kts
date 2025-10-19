@@ -37,7 +37,7 @@ allprojects {
         maven("https://libraries.minecraft.net")
         maven("https://repo.codemc.io/repository/maven-releases/")
         maven("https://repo.codemc.io/repository/maven-snapshots/")
-        maven("https://rubrionmc.github.io/repository/")
+        maven("https://leycm.github.io/repository/")
     }
 }
 
@@ -174,6 +174,6 @@ tasks.register("packets") {
             }
         }
 
-        println("[✓] All plugin builds finished and moved to /out/")
+        println("[ ] All plugin builds finished and moved to /out/")
     }
 }
