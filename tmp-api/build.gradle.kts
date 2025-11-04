@@ -1,4 +1,4 @@
 dependencies {
-    implementation(libs.leyneck)
+    compileOnly(libs.leyneck)
     compileOnly(libs.jetanno)
 }
