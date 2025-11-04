@@ -11,8 +11,20 @@
 package de.leycm.template;
 
 /**
- * TemplateApiBootstrap
+ * TemplateBootstrap
+ *
+ * <p>
+ * Default implementation of {@link TemplateApiFactory}. Serves as the entry
+ * point for initializing and accessing the Template API.
+ * </p>
+ *
+ * <p>
+ * Can be used directly or extended for custom behavior.
+ * </p>
+ *
+ * @author LeyCM
+ * @since 1.0.1
  */
-public class TemplateBootstrap implements TemplateApiModule {
+public class TemplateBootstrap implements TemplateApiFactory {
 
 }

@@ -1,4 +1,5 @@
 dependencies {
     implementation(project(":api"))
-    implementation("de.leycm.neck:api:1.1.5")
+    implementation(libs.leyneck)
+    compileOnly(libs.jetanno)
 }
