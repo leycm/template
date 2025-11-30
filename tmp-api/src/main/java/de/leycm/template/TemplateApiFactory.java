@@ -43,9 +43,8 @@ public interface TemplateApiFactory extends Initializable {
      * @throws NullPointerException if no implementation is registered
      * @see Initializable#getInstance(Class)
      */
-    @NonNull
     @Contract(pure = true)
-    static TemplateApiFactory getInstance() {
+    static @NonNull TemplateApiFactory getInstance() {
         return Initializable.getInstance(TemplateApiFactory.class);
     }
 
